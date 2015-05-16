@@ -1,0 +1,5 @@
+nbproject/
+build/
+*.vsdx
+manifest.mf
+build.xml
