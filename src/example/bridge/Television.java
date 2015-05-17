@@ -1,8 +1,8 @@
 package example.bridge;
 
 /**
- * By pressing NEXT or PREVIOUS on the remote device
- * the television will switch the channel accordingly.
+ * By pressing NEXT or PREVIOUS on the remote control
+ * the television will skip to next or previous channel.
  */
 public class Television extends AbstractDevice {
 
@@ -13,7 +13,7 @@ public class Television extends AbstractDevice {
      * Go to next channel.
      */
     @Override
-    public void nextPressed() {
+    public void nextSignal() {
         // no validation
         this.currentChannel +=1;
         System.out.println("tv next channel");
@@ -24,21 +24,21 @@ public class Television extends AbstractDevice {
      * Go to previous channel. 
      */
     @Override
-    public void previousPressed() {
+    public void previousSignal() {
         // no validation
         this.currentChannel -= 1;
         System.out.println("tv previous channel");
     }
 
     @Override
-    public void playPressed() { /* play not supported by this device */ }
+    public void playSignal() { /* play not supported by this device */ }
 
     @Override
-    public void pausePressed() { /* pause not supported by this device */ }
+    public void pauseSignal() { /* pause not supported by this device */ }
 
     @Override
-    public void stopPressed() { /* stop no supported by this device */ }
+    public void stopSignal() { /* stop no supported by this device */ }
 
     @Override
-    public void ejectPressed() { /* eject not supported by this device */ }
+    public void ejectSignal() { /* eject not supported by this device */ }
 }

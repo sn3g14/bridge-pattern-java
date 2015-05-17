@@ -1,59 +1,38 @@
 package example.bridge;
 
-public class RemoteControl implements IRemote {
+/**
+ * Base remote control that supports
+ * POWER, UP, DOWN, NEXT, PREVIOUS commands.
+ */
+public class RemoteControl {
 
-    private IRemote remoteDevice;
+    protected IRemoteControllable remoteDevice;
     
-    public RemoteControl(IRemote remoteDevice) {
+    public RemoteControl(IRemoteControllable remoteDevice) {
         this.remoteDevice = remoteDevice;
     }
     
-    public void setRemoteDevice(IRemote remoteDevice) {
+    public void setRemoteDevice(IRemoteControllable remoteDevice) {
         this.remoteDevice = remoteDevice;
     }
     
-    @Override
     public void powerPressed() {
-        remoteDevice.powerPressed();
+        remoteDevice.powerSignal();
     }
 
-    @Override
     public void upPressed() {
-        remoteDevice.upPressed();
+        remoteDevice.upSignal();
     }
 
-    @Override
     public void downPressed() {
-        remoteDevice.downPressed();
+        remoteDevice.downSignal();
     }
 
-    @Override
     public void nextPressed() {
-        remoteDevice.nextPressed();
+        remoteDevice.nextSignal();
     }
-
-    @Override
+    
     public void previousPressed() {
-        remoteDevice.previousPressed();
-    }
-
-    @Override
-    public void playPressed() {
-        remoteDevice.playPressed();
-    }
-
-    @Override
-    public void pausePressed() {
-        remoteDevice.pausePressed();
-    }
-
-    @Override
-    public void stopPressed() {
-        remoteDevice.stopPressed();
-    }
-
-    @Override
-    public void ejectPressed() {
-        remoteDevice.ejectPressed();
+        remoteDevice.previousSignal();
     }
 }

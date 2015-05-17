@@ -9,36 +9,36 @@ public class BluRayPlayer extends AbstractDevice {
     private int currentChapter;
     
     @Override
-    public void nextPressed() {
+    public void nextSignal() {
         // no validation
         this.currentChapter += 1;
         System.out.println("blue-ray player next chapter");
     }
 
     @Override
-    public void previousPressed() {
+    public void previousSignal() {
         // no validation
         this.currentChapter -= 1;
         System.out.println("blue-ray player previous chapter");
     }
 
     @Override
-    public void playPressed() {
+    public void playSignal() {
         System.out.println("blue-ray player play");
     }
 
     @Override
-    public void pausePressed() {
+    public void pauseSignal() {
         System.out.println("blue-ray player pause");
     }
 
     @Override
-    public void stopPressed() {
+    public void stopSignal() {
         System.out.println("blue-ray player stop");
     }
 
     @Override
-    public void ejectPressed() {
+    public void ejectSignal() {
         System.out.println("blue-ray player eject");
     }
 }
