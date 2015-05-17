@@ -1,3 +1,3 @@
 # bridge-pattern-java
 
-This is a bridge pattern example that has developed while writing this article about the bridge pattern: http://www.codingcookie.com/bridge-pattern/
+This is a bridge pattern example I developed while writting this article about the pattern itself: http://www.codingcookie.com/bridge-pattern/
